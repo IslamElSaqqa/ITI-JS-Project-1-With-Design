@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - Tech Accessories</title>
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/auth.css">
+    <script src="../scripts/Auth/Login.js" defer></script>
+</head>
+<body>
+    <div class="auth-page">
+        <div class="auth-container">
+            <div class="auth-image">
+                <img src="https://res.cloudinary.com/dr9yx1tod/image/upload/v1765622751/Black_VR_Guy_rif8pg.jpg" alt="VR Experience">
+            </div>
+            <div class="auth-form">
+                <h2>Sign in to Your Account</h2>
+                <p>Log in to continue seeing your products</p>
+                
+                <!--^ Success message -->
+                <div id="success-message" id="success-message"></div>
+
+                <!--^submit error  -->
+                <span id="submit-error"></span>
+
+
+                <form action="index.html" method="get">
+                    <div class="form-group">
+                        <label>Username <span id="name-error"></span></label>
+                        <div class="input-wrapper">
+                            <span class="input-icon">👤</span>
+                            <input type="text" id="username" placeholder="ex: Mohamed" required>
+
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="form-group">
+                        <label>Password  <span id="password-error"></span></label> 
+                        <div class="input-wrapper">
+                            <span class="input-icon">🔒</span>
+                            <input type="password" id="password" placeholder="ex: Abc@1234" required>
+                            
+
+                        </div>
+                    </div>
+                    
+                    <button type="submit" id="submitBtn" class="submit-btn">Sign Up</button>
+                    
+                    <div class="auth-switch">
+                        Don't have an account? <a href="signUp.html">create Account</a>
+                    </div>
+                    
+                    <div class="terms">
+                        By Creating account you agree to Company<br>
+                        <a href="#">Terms of privay and services</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

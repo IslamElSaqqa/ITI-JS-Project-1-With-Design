@@ -1,0 +1,152 @@
+/* Base Reset and Body Styles (Common) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', 'Inter', sans-serif;
+    background: #ffffff;
+}
+
+/* Header (Common) */
+.header {
+    background: white;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.header-content h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.header-content p {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    color: #333;
+    font-weight: 400;
+}
+
+.user-welcome {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.user-icon {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #f9a826 0%, #e67e22 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+}
+
+/* Navigation Bar (Common) */
+.nav-bar {
+    background: #e0e0e0;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.nav-bar a {
+    font-family: 'Inter', sans-serif;
+    margin: 0 30px;
+    font-size: 20px;
+    color: #666;
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.nav-bar a:hover {
+    color: #000;
+}
+
+/* ^ GLOBAL MEDIA QUERIES */
+
+/* Large tablets and small desktops (1200px and below) */
+@media (max-width: 1200px) {
+    .header-content h1 {
+        font-size: 40px;
+    }
+}
+
+/* Tablets (992px and below) */
+@media (max-width: 992px) {
+    .header {
+        padding: 25px 40px;
+    }
+}
+
+/* Mobile devices (768px and below) */
+@media (max-width: 768px) {
+    .header {
+        padding: 20px;
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+
+    .header-content h1 {
+        font-size: 28px;
+    }
+
+    .header-content p {
+        font-size: 16px;
+    }
+
+    .user-welcome {
+        font-size: 18px;
+        align-self: flex-end;
+    }
+
+    .user-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+
+    .nav-bar {
+        padding: 15px 0;
+    }
+
+    .nav-bar a {
+        margin: 0 15px;
+        font-size: 16px;
+        display: inline-block;
+    }
+}
+
+/* Small mobile devices (480px and below) */
+@media (max-width: 480px) {
+    .header-content h1 {
+        font-size: 24px;
+    }
+
+    .header-content p {
+        font-size: 14px;
+    }
+
+    .nav-bar a {
+        margin: 0 10px;
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,251 @@
+/* Auth Pages */
+.auth-page {
+    min-height: 100vh;
+    background: #ffffffff;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-container {
+    display: flex;
+    background: white;
+    border-radius: 30px;
+    overflow: hidden;
+    max-width: 1200px;
+    width: 100%;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+}
+
+.auth-image {
+    flex: 1;
+    background: #ffffff;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.auth-image::before,
+.auth-image::after {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: rgba(0, 255, 255, 0.1);
+    border-radius: 50%;
+    filter: blur(40px);
+}
+
+.auth-image::before {
+    top: -50px;
+    left: -50px;
+}
+
+.auth-image::after {
+    bottom: -50px;
+    right: -50px;
+}
+
+.auth-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.auth-form {
+    flex: 1;
+    padding: 100px;
+}
+
+.auth-form h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.auth-form > p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.input-icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 20px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 18px 20px 18px 55px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    transition: border-color 0.3s;
+}
+
+.form-group input::placeholder {
+    color: #bbb;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #1a7a8a;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 18px;
+    background: #0f172a;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-bottom: 20px;
+}
+
+.submit-btn:hover {
+    background: #1e293b;
+}
+
+.auth-switch {
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.auth-switch a {
+    color: #000;
+    font-weight: 600;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.terms {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+
+.terms a {
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+}
+#name-error
+{
+    color:rgb(198, 19, 19);
+    padding-left: 20px;
+
+}
+
+#password-error
+{
+    color:rgb(198, 19, 19);
+    padding-left: 20px;
+
+}
+
+#submit-error{
+    color:rgb(198, 19, 19);
+    padding-bottom: 10px;
+    font-weight: 600;
+}
+
+#success-message {
+    /* margin-top: 10px; */
+    margin-bottom: 10px;
+    padding: 12px 18px;
+    border-radius: 8px;
+    background-color: #e7f9f1;
+    color: #0f5132;
+    border: 1px solid #badbcc;
+}
+
+
+/* ^ AUTH PAGES MEDIA QUERIES */
+
+/* Tablets (992px and below) */
+@media (max-width: 992px) {
+    .auth-container {
+        flex-direction: column;
+        max-width: 600px;
+    }
+
+    .auth-image {
+        min-height: 300px;
+    }
+}
+
+/* Mobile devices (768px and below) */
+@media (max-width: 768px) {
+    .auth-page {
+        padding: 20px;
+    }
+
+    .auth-form {
+        padding: 40px 25px;
+    }
+
+    .auth-form h2 {
+        font-size: 28px;
+    }
+
+    .auth-form > p {
+        font-size: 16px;
+    }
+
+    .form-group label {
+        font-size: 16px;
+    }
+
+    .form-group input {
+        padding: 16px 20px 16px 50px;
+        font-size: 15px;
+    }
+
+    .submit-btn {
+        padding: 16px;
+        font-size: 16px;
+    }
+}
+
+/* Small mobile devices (480px and below) */
+@media (max-width: 480px) {
+    .auth-form {
+        padding: 30px 20px;
+    }
+
+    .auth-form h2 {
+        font-size: 24px;
+    }
+}
