@@ -1,5 +1,11 @@
 document.addEventListener("DOMContentLoaded", function() {
     retrieveUsername();
+
+    const logoutBtn = document.getElementById("logoutBtn");
+    if (!getCookie('username') && logoutBtn) {
+        logoutBtn.style.display = "none";
+    }
+
 });
 
 let spannedUsername = document.getElementById("Username");
